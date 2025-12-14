@@ -37,19 +37,19 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[60%] md:pt-[10%] flex justify-center">
       <form
-        className="bg-black w-1/2 grid grid-cols-12"
+        className="bg-black w-full md:w-1/2 grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           type="text"
           placeholder={lang[langKey].placeholder}
-          className="p-4 m-4 bg-white col-span-9"
+          className="p-4 m-0 md:m-4 bg-white md:col-span-9 col-span-8"
           ref={searchText}
         />
         <button
-          className="py-2 px-4 m-4 cursor-pointer bg-red-700 rounded-lg text-white col-span-3"
+          className="py-2 px-0 md:px-4 m-0 md:m-4 cursor-pointer bg-red-700 rounded-lg text-white col-span-4 md:col-span-3"
           onClick={handleSearchClick}
         >
           {lang[langKey].search}

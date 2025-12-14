@@ -1,10 +1,12 @@
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 to-transparent text-white">
-      <div className="pt-[10%] px-12 max-w-2xl">
-        <h1 className="text-6xl font-bold">{title}</h1>
+    <div className="absolute inset-0 z-10 bg-linear-to-r from-black/80 to-transparent text-white">
+      <div className="px-12 max-w-2xl
+                h-full flex flex-col justify-center items-center text-center
+                sm:items-start sm:text-left sm:justify-start sm:pt-[10%]">
+        <h1 className="text-lg md:text-6xl font-bold">{title}</h1>
 
-        <p className="py-6 text-lg">
+        <p className="py-6 text-md">
           {overview}
         </p>
 

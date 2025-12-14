@@ -50,7 +50,7 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute z-50 px-8 py-2 bg-linear-to-b from-black w-screen flex justify-between items-center">
+    <div className="absolute z-50 px-8 py-2 bg-linear-to-b from-black w-screen flex flex-col justify-between items-center md:flex-row">
       <img
         className="w-44"
         alt="logo"
@@ -78,7 +78,7 @@ const Header = () => {
             {showSearch ? "Home" : "Search"}
           </button>
           <img
-            className="w-12 h-12"
+            className="sm:hidden w-12 h-12"
             src={user?.photoURL}
             alt="user-icon"
           />

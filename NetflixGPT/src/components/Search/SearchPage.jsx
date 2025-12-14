@@ -7,8 +7,9 @@ movie suggestions */
 const Search = () => {
   return (
     <div>
-      <div className="fixed -z-10">
+      <div className="fixed -z-10 pointer-events-none">
         <img
+          className="h-screen w-screen object-cover"
           alt="background-image"
           src={BACKGROUND_IMG}
         />
