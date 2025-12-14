@@ -15,11 +15,11 @@ import SearchPage from "./Search/SearchPage.jsx";
 
 const Browse = () => {
   const showSearch = useSelector((store) => store.search.showSearch);
-  useGetMovies(API_URLS.PLAYING, addNowPlayingMovies);
-  useGetMovies(API_URLS.POPULAR, addPopularMovies);
-  useGetMovies(API_URLS.UPCOMING, addUpcomingMovies);
-  useGetMovies(API_URLS.TOP_RATED, addtopratedMovies);
-  useGetMovies(API_URLS.POPULAR_TV, addPopularShows);
+  useGetMovies(API_URLS.PLAYING, addNowPlayingMovies, "nowPlayingMovies");
+  useGetMovies(API_URLS.POPULAR, addPopularMovies, "popularMovies");
+  useGetMovies(API_URLS.UPCOMING, addUpcomingMovies, "upcomingMovies");
+  useGetMovies(API_URLS.TOP_RATED, addtopratedMovies, "topratedMovies");
+  useGetMovies(API_URLS.POPULAR_TV, addPopularShows, "popularShows");
 
   return (
     <div>
