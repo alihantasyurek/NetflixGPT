@@ -10,6 +10,6 @@
     - Title & Description
     - MovieSuggestions
       - MovieLists \* N
-- NetflixGPT
+- Netmini
   - Search Bar
   - Movie Suggestions

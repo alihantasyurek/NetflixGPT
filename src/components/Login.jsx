@@ -45,14 +45,16 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL: USER_AVATAR,
-          }).then(() => {
-            // Profile updated!
-            const { uid, email, displayName, photoURL } = auth.currentUser;
-            dispatch(addUser({ uid, email, displayName, photoURL }));
-          }).catch((error) => {
-            // An error occurred
-            setErrorMessage(error);
-          });
+          })
+            .then(() => {
+              // Profile updated!
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(addUser({ uid, email, displayName, photoURL }));
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error);
+            });
           //console.log(user);
           // ...
         })
@@ -129,7 +131,7 @@ const Login = () => {
         </button>
         <p className="py-4 underline cursor-pointer" onClick={toggleSignInForm}>
           {isSignIn
-            ? "New to Netflix? Sign up now."
+            ? "New to Netmini? Sign up now."
             : "Already registered? Sign in now"}
         </p>
       </form>

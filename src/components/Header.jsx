@@ -16,11 +16,13 @@ const Header = () => {
   const showSearch = useSelector((store) => store.search.showSearch);
   const navigate = useNavigate();
   const handleSignOut = () => {
-    signOut(auth).then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
-      // An error happened.
-    });
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
   };
 
   useEffect(() => {
@@ -52,27 +54,22 @@ const Header = () => {
   return (
     <div className="absolute z-50 px-8 py-2 bg-linear-to-b from-black w-screen flex flex-col justify-between items-center md:flex-row">
       <div className="cursor-pointer" onClick={() => dispatch(closeSearch())}>
-        <img
-          className="w-44"
-          alt="logo"
-          src={LOGO}
-        />
+        <img className="w-36" alt="logo" src={LOGO} />
       </div>
       {user && (
         <div className="flex gap-3">
-          {showSearch &&
-            (
-              <select
-                className="p-2 m-2 bg-black/30 text-white"
-                onChange={handleLanguageChange}
-              >
-                {SUPPORTED_LANGUAGES.map((lang) => (
-                  <option key={lang.identifier} value={lang.identifier}>
-                    {lang.name}
-                  </option>
-                ))}
-              </select>
-            )}
+          {showSearch && (
+            <select
+              className="p-2 m-2 bg-black/30 text-white"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
           <button
             onClick={handleSearchClick}
             className="text-white mx-2 cursor-pointer"
